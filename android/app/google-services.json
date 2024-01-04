@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "896291915201",
+    "project_id": "khokanaphonedairy",
+    "storage_bucket": "khokanaphonedairy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:896291915201:android:7ac0d9d5dbe35d6eda9b40",
+        "android_client_info": {
+          "package_name": "com.example.phonebook"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqyhFPZF7nZmsONjMy15XJX7R30e8JnKo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
