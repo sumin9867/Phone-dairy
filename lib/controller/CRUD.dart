@@ -1,33 +1,3 @@
-// import 'dart:ffi';
-
-// import 'package:cloud_firestore/cloud_firestore.dart';
-// import 'package:firebase_auth/firebase_auth.dart';
-
-// class CRUDService {
-//   User? user = FirebaseAuth.instance.currentUser;
-//   // add new useer
-//   Future addnewContact(String name, String phone, String job, String kuna,
-//       String tole, String email) async {
-//     Map<String, dynamic> data = {
-//       "name": name,
-//       "email": email,
-//       "phone": phone,
-//       "job": job,
-//       "kuna": kuna,
-//       "tole": tole
-//     };
-//     try {
-//       await FirebaseFirestore.instance
-//           .collection("users")
-//           .doc(user!.uid)
-//           .collection("contact")
-//           .add(data);
-//       print("Document added");
-//     } catch (e) {
-//       print(e.toString());
-//     }
-//   }
-// }
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
