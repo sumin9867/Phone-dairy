@@ -16,11 +16,7 @@ class CRUDService {
       "tole": tole
     };
     try {
-      await FirebaseFirestore.instance
-          .collection("users")
-          .doc(user!.uid)
-          .collection("contacts")
-          .add(data);
+      await FirebaseFirestore.instance.collection("users").add(data);
       print("Document Added");
     } catch (e) {
       print(e.toString());
@@ -29,11 +25,8 @@ class CRUDService {
 
   // read documents inside firestore
   Stream<QuerySnapshot> getContacts({String? searchQuery}) async* {
-    var contactsQuery = FirebaseFirestore.instance
-        .collection("users")
-        .doc(user!.uid)
-        .collection("contacts")
-        .orderBy("name");
+    var contactsQuery =
+        FirebaseFirestore.instance.collection("users").orderBy("name");
 
     // a filter to perfom search
     if (searchQuery != null && searchQuery.isNotEmpty) {
@@ -60,8 +53,6 @@ class CRUDService {
     try {
       await FirebaseFirestore.instance
           .collection("users")
-          .doc(user!.uid)
-          .collection("contacts")
           .doc(docID)
           .update(data);
       print("Document Upated");
@@ -73,12 +64,7 @@ class CRUDService {
   // delete contact from firestore
   Future deleteContact(String docID) async {
     try {
-      await FirebaseFirestore.instance
-          .collection("users")
-          .doc(user!.uid)
-          .collection("contacts")
-          .doc(docID)
-          .delete();
+      await FirebaseFirestore.instance.collection("users").doc(docID).delete();
       print("Contact Deleted");
     } catch (e) {
       print(e.toString());

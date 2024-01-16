@@ -7,14 +7,14 @@ import 'package:phonebook/controller/CRUD.dart';
 import 'package:phonebook/controller/auth.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class Homepage extends StatefulWidget {
-  const Homepage({super.key});
+class AdminHomePage extends StatefulWidget {
+  const AdminHomePage({super.key});
 
   @override
-  State<Homepage> createState() => _HomepageState();
+  State<AdminHomePage> createState() => _AdminHomePageState();
 }
 
-class _HomepageState extends State<Homepage> {
+class _AdminHomePageState extends State<AdminHomePage> {
   late Stream<QuerySnapshot> _stream;
   TextEditingController _searchController = TextEditingController();
   FocusNode _searchfocusNode = FocusNode();

@@ -1,13 +1,14 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:phonebook/Screen/Home.dart';
+import 'package:phonebook/Admin/Admin_login.dart';
 import 'package:phonebook/Screen/addContactPage.dart';
+import 'package:phonebook/Screen/userhome.dart';
 import 'package:phonebook/auth/Login.dart';
 import 'package:phonebook/auth/Signup.dart';
 import 'package:phonebook/controller/auth.dart';
 import 'package:phonebook/firebase_options.dart';
+import 'package:phonebook/test.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -33,11 +34,12 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       routes: {
-        '/': (context) => CheckUserState(),
-        '/home': (context) => Homepage(),
+        '/': (context) => LoginPage(),
+        '/home': (context) => UserHomepage(),
         '/signup': (context) => SignUp(),
         '/login': (context) => LoginPage(),
-        '/add': (context) => AddContact()
+        '/add': (context) => AddContact(),
+        '/admin': (context) => AdminLogin()
       },
     );
   }
