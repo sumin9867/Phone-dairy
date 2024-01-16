@@ -40,7 +40,7 @@ dependencies:
   firebase_auth: ^4.15.3
   google_sign_in: ^6.1.6
   cloud_firestore: ^4.13.6
-  url_launcher: ^6.2.2
+  url_launcher: ^6.0.6
   animate_do: ^3.1.2
   shared_preferences: ^2.2.2
 
